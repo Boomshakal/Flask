@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>姓名: <input type="text" id="username">
+    <button onclick="open_ws()">登录</button>
+</p>
+<p>内容: <input type="text" id="message">
+    <button onclick="send_msg()">发送</button>
+</p>
+<div id="chat_list"></div>
+
+</body>
+<script type="application/javascript">
+    var ws = null;
+
+    function open_ws() {
+        var username = document.getElementById("username").value;
+        ws = new WebSocket('ws://192.168.1.159:9527/ws/' + username);
+        ws.onopen = function () {
+            alert('欢迎登录');
+        };
+        ws.onmessage = function (eventMessage) {
+            var chat = JSON.parse(eventMessage.data);
+            var p = document.createElement("p");
+            p.innerText = chat.from_user + ':' + chat.chat;
+            document.getElementById('chat_list').appendChild(p);
+        }
+    }
+
+    function send_msg() {
+        var msg = document.getElementById('message').value;
+        ws.send(msg)
+    }
+</script>
+</html>
