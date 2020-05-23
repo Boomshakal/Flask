@@ -20,7 +20,7 @@
 
     function open_ws() {
         var username = document.getElementById("username").value;
-        ws = new WebSocket("ws://192.168.1.158:9527/my_ws/" + username);
+        ws = new WebSocket("ws://192.168.1.159:9527/my_ws/" + username);
         ws.onopen = function () {
             alert("欢迎登录");
         };

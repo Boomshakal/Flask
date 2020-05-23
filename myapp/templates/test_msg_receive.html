@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="chat_list"></div>
+<audio controls autoplay="autoplay" src="" id="music"></audio>
+</body>
+<script type="application/javascript">
+    ws = new WebSocket("ws://192.168.1.159:9527/my_ws/" + 'toy');
+    ws.onmessage = function (eventMessage) {
+        console.log(eventMessage.data);
+        var chat = JSON.parse(eventMessage.data);
+        var music = chat.chat.music;
+        document.getElementById('music').src = 'http://192.168.1.159:5000/get_music/' + music
+
+    };
+
+</script>
+</html>

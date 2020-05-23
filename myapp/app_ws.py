@@ -22,10 +22,12 @@ def ws(username):
 @app_ws.route('/my_ws/<username>')
 def my_ws(username):
     user_socket = request.environ.get('wsgi.websocket')
-    print(user_socket)
+    # print(user_socket)
     user_dict[username] = user_socket
+    print(user_dict)
     while True:
         msg = user_socket.receive()
+        print(msg)
         msg_dict = json.loads(msg)
         msg_dict['from_user'] = username
         to_user = msg_dict.get('to_user')
