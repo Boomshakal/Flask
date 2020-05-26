@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, send_file, make_response
 
-from database_connect import Parameters, DatabasePool
+from database.database_connect import Parameters, DatabasePool
 from settings import BASE_DIR, PHOTO_DIR, MUSIC_DIR, FILE_DIR
 import os
 
