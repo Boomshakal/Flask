@@ -4,19 +4,22 @@ from settings import client, RESPONSE
 
 user = Blueprint('user', __name__)
 
+
 @user.after_request
 def cors(environ):
-    environ.headers['Access-Control-Allow-Origin']='*'
-    environ.headers['Access-Control-Allow-Method']='*'
-    environ.headers['Access-Control-Allow-Headers']='x-requested-with,content-type'
+    environ.headers['Access-Control-Allow-Origin'] = '*'
+    environ.headers['Access-Control-Allow-Method'] = '*'
+    environ.headers['Access-Control-Allow-Headers'] = 'x-requested-with,content-type'
     return environ
+
 
 @user.route('/login', methods=['POST'])
 def login():
     form_data = request.form.to_dict()
     res = client['local']['user'].find_one(form_data)
-    res['_id'] = str(res['_id'])
+
     if res:
+        res['_id'] = str(res['_id'])
         RESPONSE['code'] = 0
         RESPONSE['msg'] = '登录成功'
         RESPONSE['data'] = res

@@ -9,6 +9,7 @@ PHOTO_DIR = "photo"
 MUSIC_DIR = "music"
 FILE_DIR = "D:\Lotus\Domino\data\domino\html\mesintface"
 QR_DIR = "QR"
+PDF_DIR ="file"
 
 RESPONSE = {
     'code': '',
