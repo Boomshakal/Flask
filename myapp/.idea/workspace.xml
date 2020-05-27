@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="433ddd78-17b4-44ff-a398-6ed828558256" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/upload.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/get_set_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/get_set_files.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/upload.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/upload.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,6 +194,7 @@
       <workItem from="1590369022314" duration="2042000" />
       <workItem from="1590386565327" duration="2585000" />
       <workItem from="1590550979441" duration="4368000" />
+      <workItem from="1590561812547" duration="993000" />
     </task>
     <servers />
   </component>
@@ -230,10 +229,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="234" y="109" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589534085228" />
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1590550979619">
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1590561812539">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1590550979619" />
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1590561812539" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/myapp$app_ws.coverage" NAME="app_ws Coverage Results" MODIFIED="1590551772511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
