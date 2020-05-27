@@ -2,8 +2,8 @@ from flask import Flask, render_template
 from apps.content_list import content
 from apps.get_set_files import gsa
 from apps.talk import talk
-from user import user
-from createQR import QR
+from apps.user import user
+from apps.createQR import QR
 
 app = Flask(__name__)
 
