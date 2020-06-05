@@ -1,4 +1,4 @@
-from flask import Blueprint, jsonify, send_file, make_response, request
+from flask import Blueprint, jsonify, send_file, make_response, request, render_template
 
 from database.database_connect import Parameters, DatabasePool
 from settings import BASE_DIR, PHOTO_DIR, MUSIC_DIR, FILE_DIR, PDF_DIR
@@ -39,8 +39,11 @@ def get_file(file_name):
         return response
 
 
-@gsa.route('/upload', methods=['POST'])
+@gsa.route('/upload', methods=['GET', 'POST'])
 def upload():
+    if request.method == 'GET':
+        return render_template('upload.html')
+
     file_obj = request.files.get("file")  # "file"对应前端表单name属性
 
     print(request.form.get('string_key'))
@@ -63,3 +66,10 @@ def upload():
     file_path = os.path.join(BASE_DIR, PDF_DIR, file_name)
     file_obj.save(file_path)
     return "上传成功"
+
+
+@gsa.route('/download/<file_name>', methods=['GET'])
+def download(file_name):
+    file_path = os.path.join(BASE_DIR, PDF_DIR, file_name)
+
+    return send_file(file_path)
