@@ -14,7 +14,8 @@ PDF_DIR ="file"
 RESPONSE = {
     'code': '',
     'msg': '',
-    'data': None
+    'data': None,
+    'info': '',
 }
 
 if __name__ == '__main__':
