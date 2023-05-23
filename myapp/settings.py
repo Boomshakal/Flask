@@ -16,6 +16,7 @@ RESPONSE = {
     'msg': '',
     'data': None,
     'info': '',
+    'error': None
 }
 
 if __name__ == '__main__':
