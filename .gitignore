@@ -29,3 +29,5 @@ webassets-manifest.*
 *.sublime-workspace
 *.komodoproject
 .komodotools/
+
+migrations/
